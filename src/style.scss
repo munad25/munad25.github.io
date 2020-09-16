@@ -1,0 +1,112 @@
+.container-fluid {
+
+    .row {
+        z-index: 9999;
+    }
+
+    &.jumbotron{
+        border-radius: 0;
+        margin: 0;
+        background-image: url('../blur-close-up-code-computer-546819.jpg');
+        background-repeat: no-repeat;
+        background-position: 0 -10px;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 75vh;
+
+        &::before{
+            content: " ";
+            width: 100%;
+            height: 75%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.856);
+            color: #ffffff;
+        }
+    }
+}
+
+section {
+    min-height: 50vh;
+
+    &#portofolio{
+        min-height: 75vh;
+    }
+}
+
+
+.navbar-light{
+    &.fixed-top{
+        box-shadow: 1px 1px 5px rgba(51, 51, 51, 0.186);
+    }
+    .navbar-nav {
+       .nav-item{
+           margin: 0 20px;
+           font-weight: bold;
+           
+           &.active {
+               > .nav-link{
+                   color: #ffc107;
+               }
+           }
+
+        } 
+    
+    }
+}
+
+.service-icon{
+    margin-bottom: 20px;
+    svg {
+        height: 100px;
+        padding-bottom: 20px;
+        border-bottom: 1px rgb(250, 0, 0) dotted;
+    }
+}
+
+.sosmed { margin: 0 10px;}
+
+ul {
+    &.timeline {
+        list-style-type: none;
+        position: relative;
+
+        &:before{
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+
+        > li {
+            margin: 20px 0;
+            padding-left: 20px;
+
+            &:before{
+                content: ' ';
+                background: white;
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                border: 3px solid #22c0e8;
+                left: 20px;
+                width: 20px;
+                height: 20px;
+                z-index: 400;
+            }
+        }
+    }
+}
+
+
+.img-rounded {
+    border-radius: 50%;
+}
+
